@@ -1,6 +1,8 @@
 # Welcome to Lift Me Up
 
 ![Lift Me Up Logo](https://github.com/tiphaineoz/Lift_Me_Up/images/Logo_Lift_Me_Up.jpg)
+![Lift Me Up Logo](https://github.com/tiphaineoz/Lift_Me_Up/blob/main/images/Logo_Lift_Me_Up.jpg?raw=true)
+
 
 
 ## The Data
