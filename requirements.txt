@@ -141,3 +141,7 @@ widgetsnbextension==4.0.10
 xxhash==3.4.1
 yarl==1.9.4
 youtube-transcript-api
+streamlit
+pytube
+langchain
+langchain_openai
