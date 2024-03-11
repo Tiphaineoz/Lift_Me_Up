@@ -92,4 +92,5 @@ if submit:
         coach_name=coach_name,
         page="p2_video_url.py"
     )
+    switch_page("p2_video_url.py")
     

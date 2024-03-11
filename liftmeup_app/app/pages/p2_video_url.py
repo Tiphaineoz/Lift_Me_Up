@@ -15,19 +15,30 @@ st.write(f"Hi {user_name}")
 st.write(f" You said: {user_feeling}")
 st.write(f"You chose {coach_name} as your motivational coach.")
 
+coach_dict = { "Peter" : { 'url' : "https://clips-presenters.d-id.com/william/qE4P1OFtWM/Lc2cQ93AYR/image.png",
+                          'voice_id' : "en-US-AndrewNeural",
+                            'style' : "Cheerful"},
+              "John" : {}
+              , 
+              "Jenna", 
+              "Gon"
+}
+
+input = #hugostuff
+
 #This is the function to create the talk
 def createTalk():
     url = "https://api.d-id.com/talks"
     payload = {
-        "source_url": "https://clips-presenters.d-id.com/william/qE4P1OFtWM/Lc2cQ93AYR/image.png",
+        "source_url": coach_dict[coach_name]['url'],
         "script": {
             "type": "text",
-            "input": "So I had the chance to meet with some of the kids in the program today, where are you.",
+            "input": #hugostuff - "So I had the chance to meet with some of the kids in the program today, where are you.",
             "provider":{
                 "type": "microsoft",
-                "voice_id": "en-US-AndrewNeural",
+                "voice_id": coach_dict[coach_name]['voice_id'],
                 "voice_config":{
-                    "style": "Cheerful"
+                    "style": coach_dict[coach_name]['style'],
                 }
             }
         },
@@ -47,6 +58,7 @@ def createTalk():
     data = json.loads(response.text)
     id_video = data.get("id")
     return id_video
+
 #This is the function to create the get
 
 def getTalk(id_video):
@@ -64,13 +76,15 @@ def getTalk(id_video):
 id_test = createTalk()
 #id_test = "tlk_U-ml4wN-zMsvvm1T1ff62"
 st.subheader(id_test)
+
 time.sleep(5)
+
 video_test = getTalk(id_test)
 
 data = json.loads(video_test.text)
-url_video = data.get("result_url") #THIS LINE IS THE ONE THAT WORKS
+# url_video = data.get("result_url") #THIS LINE IS THE ONE THAT WORKS
 url_video = "https://player.vimeo.com/video/197634410?title=0&portrait=0&byline=0&autoplay=1&loop=1&transparent=1&muted=1" #THIS WORKS TOO
-#video_file = open(url_video, 'rb')
-#video_bytes = video_file.read()
+video_file = open(url_video, 'rb')
+video_bytes = video_file.read()
 
 st.video(url_video, format='video/mp4', start_time=0)

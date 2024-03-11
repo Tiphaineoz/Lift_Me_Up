@@ -11,7 +11,6 @@ def get_transcript(video_id):
     return transcript_text
 
 
-
 def summarize_transcript(video_id):
     transcript = get_transcript(video_id)
     input_prompt = f"summarize: {transcript}"
