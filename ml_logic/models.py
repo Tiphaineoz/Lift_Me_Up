@@ -1,5 +1,5 @@
 # here we'll put all the models that we'll use for the project
-
+import os
 #list of library needed
 from tensorflow import keras
 from tensorflow.keras.models import Sequential
@@ -60,6 +60,12 @@ def train_model(model, X_train, y_train, validation_data=None, validation_split 
     )
     
     print(f"✅ Model trained with {epochs} epochs")
+    
+    save_dir = '../model_registry'
+    model_filename = 'my_model.h5'
+    model_path = os.path.join(save_dir, model_filename)
+    model.save(model_path)
+    
 
     return model, history
 
@@ -68,5 +74,10 @@ def train_model(model, X_train, y_train, validation_data=None, validation_split 
 def evaluate_model(model, X_test, y_test):
     score = model.evaluate(X_test, y_test, verbose=0)
     print(f"✅ Model evaluated with {score[1]} accuracy")
+    if score > 'x':
+        save_dir = 'model_registry'
+        model_filename = 'my_model.h5'
+        model_path = os.path.join(save_dir, model_filename)
+        model.save(model_path)
     return score
 
