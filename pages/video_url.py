@@ -26,15 +26,15 @@ st.write(f"Hi {st.session_state.user_name }")
 st.write(f"You chose {st.session_state.coach_name} as your motivational coach.")
 
 #input = "I'm feeling quite anxious about this project I'm not sure how I'll finish it on time" 
-input = "I hear you're feeling a bit anxious about this project, wondering if you'll be able to finish it on time. \
-        First off, I want you to take a deep breath. Inhale confidence, exhale doubt. You've got this. \
-        See, feeling a little anxious is totally normal when you're pushing yourself to excel. It's a sign that you care \
-        deeply about your work, and that's something to be proud of. But here's the thing: anxiety only has as much power as \
-        you give it. You're in the driver's seat of your mind, my friend."
+# input = "I hear you're feeling a bit anxious about this project, wondering if you'll be able to finish it on time. \
+#         First off, I want you to take a deep breath. Inhale confidence, exhale doubt. You've got this. \
+#         See, feeling a little anxious is totally normal when you're pushing yourself to excel. It's a sign that you care \
+#         deeply about your work, and that's something to be proud of. But here's the thing: anxiety only has as much power as \
+#         you give it. You're in the driver's seat of your mind, my friend."
 
 if plan == 'PlanB':
-    #input = planB(st.session_state.user_feeling, st.session_state.user_name)
-    input = input
+    input = planB(st.session_state.user_feeling, st.session_state.user_name)
+    #input = input
     data = download_video(st.session_state.coach_name, input)
     st.write(data)
     video = data.get("result_url")
