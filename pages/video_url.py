@@ -10,6 +10,7 @@ from components.landing import *
 from components.audio_video import *
 from params import *
 from langchain.plan_b import planB
+from langchain.label_predict import predict_label
 
 key = os.environ.get('key')
 api_key = os.environ.get('TIPH_OPENAI')
@@ -22,7 +23,8 @@ landing_page(cloud)
 
 # Use the values from the input page
 st.write(f"Hi {st.session_state.user_name }")
-#st.write(f" You said: {st.session_state.user_feeling}")
+st.write(f" You said: {st.session_state.user_feeling}")
+st.write(f" If I understand correctly your preocupation today is about: {predict_label(st.session_state.user_feeling)}")
 st.write(f"You chose {st.session_state.coach_name} as your motivational coach.")
 
 #input = "I'm feeling quite anxious about this project I'm not sure how I'll finish it on time" 
@@ -34,7 +36,7 @@ st.write(f"You chose {st.session_state.coach_name} as your motivational coach.")
 
 if plan == 'PlanB':
     input = planB(st.session_state.user_feeling, st.session_state.user_name)
-    #input = input
+    # input = input
     data = download_video(st.session_state.coach_name, input)
     st.write(data)
     video = data.get("result_url")
