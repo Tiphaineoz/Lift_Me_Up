@@ -17,7 +17,7 @@ from model_registry import *
 def tokenizer_padding(input, max_len = 160):
     tokenizer_path = 'model_registry/tokenizer.json'
     with open(tokenizer_path, 'r') as handle:
-        loaded_json = json.load(handle)
+        loaded_json = handle.read()
     tokenizer = tokenizer_from_json(loaded_json)
     input_token = tokenizer.texts_to_sequences([input])
     input_pad = pad_sequences(input_token, maxlen=max_len)
