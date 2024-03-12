@@ -24,7 +24,6 @@ landing_page(clear)
 # Use the values from the input page
 st.write(f"Hi {st.session_state.user_name }")
 st.write(f" You said: {st.session_state.user_feeling}")
-st.write(f" If I understand correctly your preocupation today is about: {predict_label(st.session_state.user_feeling)}")
 st.write(f"You chose {st.session_state.coach_name} as your motivational coach.")
 
 # input = "I'm feeling quite anxious about this project I'm not sure how I'll finish it on time" 
