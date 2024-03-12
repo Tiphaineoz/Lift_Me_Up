@@ -145,3 +145,4 @@ streamlit
 pytube
 langchain
 langchain_openai
+openai

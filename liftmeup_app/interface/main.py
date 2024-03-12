@@ -38,3 +38,8 @@ def predict_input_label(model, tokenizer, new_text, y_numerical, max_len = 160):
     
     return predicted_labels
 
+def main(name, feeling, coach):
+    motivational_text = text_input_func(feeling)
+    audio = text_conv_audio(motivational_text)
+    image = image_extraction(coach)
+    return video(audio, image)

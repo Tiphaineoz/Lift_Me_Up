@@ -12,8 +12,20 @@ os.environ.get("HUGO_OPENAI")
 # Load the OpenAI model
 llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613")
 
-#  Transcribe multiple Youtube videos
+# TIPH DRAFT: 
+# from ml_logic.models import topic
+# topic = 'eating_disorder'
 
+# youtube_dict = {'eating_disorder' : [video1,video2, video3], 
+#                 'depression' : [video1,video2, video3], 
+#                 'anxiety' : [video1,video2, video3], 
+#                 'stress' : [video1,video2, video3], 
+#                 'motivation' : [video1,video2, video3]}
+
+# motivational_agent = {'tony robbins': 'https://www.youtube.com/watch?v=O9F19ban7A4',}
+# youtube_dict[topic]
+
+#  Transcribe multiple Youtube videos
 def transcribe_ytvideos(youtube_url_list):
     texts = []
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=400)
