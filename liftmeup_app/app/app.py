@@ -1,7 +1,7 @@
 #from Aitor work 
 
 # Importing the libraries
-from liftmeup_app.params import *
+#from liftmeup_app.params import *
 import os
 
 import streamlit as st
