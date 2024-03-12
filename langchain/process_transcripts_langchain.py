@@ -1,5 +1,5 @@
 # code from Hugo 
-from liftmeup_app.params import *
+from params import *
 
 #import libraries
 from langchain_community.document_loaders import YoutubeLoader
