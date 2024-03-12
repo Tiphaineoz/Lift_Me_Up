@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 from app import landing_page
-from liftmeup_app.langchain.plan_b import planB
+#from liftmeup_app.langchain.plan_b import planB
 import requests
 import json
 import time
