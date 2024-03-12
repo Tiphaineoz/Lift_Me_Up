@@ -6,6 +6,9 @@ import pandas as pd
 
 # import from within the code
 from components.landing import *
+import subprocess
+
+subprocess.run(['pip', 'install', '.'])
         
 # few image choices 
 logo = 'images/Logo_Lift_Me_Up.jpg' 
