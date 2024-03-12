@@ -4,6 +4,7 @@ import numpy as np
 import pickle
 import json
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.text import tokenizer_from_json
 from keras.utils import to_categorical
 from tensorflow.keras.models import load_model
 #from tensorflow.keras.preprocessing.text import Tokenizer
@@ -14,9 +15,10 @@ from model_registry import *
 
 # need to tokenize the new input
 def tokenizer_padding(input, max_len = 160):
-    tokenizer_path = 'model_registry/tokenizer.pickle'
-    with open(tokenizer_path, 'rb') as handle:
-        tokenizer = pickle.load(handle)
+    tokenizer_path = 'model_registry/tokenizer.json'
+    with open(tokenizer_path, 'r') as handle:
+        loaded_json = json.load(handle)
+    tokenizer = tokenizer_from_json(loaded_json)
     input_token = tokenizer.texts_to_sequences([input])
     input_pad = pad_sequences(input_token, maxlen=max_len)
     return input_pad
