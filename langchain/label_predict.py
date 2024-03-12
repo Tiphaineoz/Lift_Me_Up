@@ -6,7 +6,7 @@ import json
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from keras.utils import to_categorical
 from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing.text import Tokenizer
+#from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing import sequence
 
 # import from within the code
@@ -18,7 +18,7 @@ def tokenizer_padding(input, max_len = 160):
     with open(tokenizer_path, 'rb') as handle:
         tokenizer = pickle.load(handle)
     input_token = tokenizer.texts_to_sequences([input])
-    input_pad = sequence.pad_sequences(input_token, maxlen=max_len)
+    input_pad = pad_sequences(input_token, maxlen=max_len)
     return input_pad
 
 def predict_label(input):
