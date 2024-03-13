@@ -51,12 +51,10 @@ if plan == 'PlanB':
     #input = input
     
 
-st.write(f"input: {input}")
-
 st.write("test functions one by one")
 response, video_id = createTalk(st.session_state.coach_name, input)
-st.write(f"creating talk ? response: {response} video_id : {video_id}")
-time.sleep(30)
+st.write(f"Your coach will be with you shortly... response: {response} video_id : {video_id}")
+time.sleep(40)
 video_test = getTalk(video_id)
 st.write(f"got the talk ? {video_test}")
 st.write(f" type : {type(video_test)}")
