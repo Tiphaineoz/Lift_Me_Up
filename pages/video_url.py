@@ -49,8 +49,11 @@ if plan == 'PlanA':
 if plan == 'PlanB':
     input = planB(st.session_state.user_feeling, st.session_state.user_name)
     #input = input
-    
+
+response = createTalk(st.session_state.coach_name, input)
+st.write(f"creating talk ? {response}")
 data = download_video(st.session_state.coach_name, input)
+st.write(f" result download video  {data}")
 st.write(data)
 video = data.get("result_url")
 if video: 
