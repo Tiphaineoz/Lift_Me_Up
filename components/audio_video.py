@@ -84,6 +84,8 @@ def getTalk(id_video):
 def download_video(coach_name, input):
     id_video = createTalk(coach_name, input)
     video_test = getTalk(id_video)
+    st.write(f"got the talk ? {video_test}")
+    st.write(type(video_test))
     data = json.loads(video_test.text)
     return data
 
