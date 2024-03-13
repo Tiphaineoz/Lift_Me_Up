@@ -4,7 +4,7 @@ import os
 from params import *
 from openai import OpenAI 
 
-api_key = os.environ.get('TIPH_OPENAI')
+api_key = os.environ.get('api_key')
 
 def planB(prompt, user_name):
     client = OpenAI(api_key = api_key)
