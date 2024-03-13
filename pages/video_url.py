@@ -50,7 +50,10 @@ if plan == 'PlanB':
     input = planB(st.session_state.user_feeling, st.session_state.user_name)
     #input = input
     
+
 st.write(f"input: {input}")
+
+st.write("test functions one by one")
 response, video_id = createTalk(st.session_state.coach_name, input)
 st.write(f"creating talk ? response: {response} video_id : {video_id}")
 video_test = getTalk(video_id)
@@ -59,6 +62,22 @@ st.write(f" type : {type(video_test)}")
 data = json.loads(video_test.text)
 st.write(f"got the json ? {data}")
 
+audio = data.get("audio_url")
+if audio: 
+    st.write("downloading audio ⏲️")
+    time.sleep(5)
+    st.audio(audio)
+    
+video = data.get("result_url")
+if video: 
+    st.write("downloading video ⏲️")
+    time.sleep(5)
+    st.video(video)
+st.write(f"-- For the hard of hearing audience --")
+st.write(f"Here is the transcript:")
+st.write(f"{input}")
+
+st.write("test built in function")
 data = download_video(st.session_state.coach_name, input)
 st.write(f" result download video function {data}")
 st.write(data)
