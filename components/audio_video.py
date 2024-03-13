@@ -83,9 +83,11 @@ def getTalk(id_video):
 # this is the combine function to run both of the above and get the result (audio + video)
 def download_video(coach_name, input):
     response, id_video = createTalk(coach_name, input)
+    time.sleep(20)
     video_test = getTalk(id_video)
     st.write(f"got the talk ? {video_test}")
     st.write(type(video_test))
+    time.sleep(20)
     data = json.loads(video_test.text)
     return data
 
