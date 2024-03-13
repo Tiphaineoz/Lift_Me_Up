@@ -37,9 +37,7 @@ def createTalk(coach_name, input):
             "provider":{
                 "type": "microsoft",
                 "voice_id": voice_id,
-                "voice_config":{
-                    "style": style,
-                }
+                "voice_config":{"style": style}
             }
         },
         "config": {
@@ -59,7 +57,7 @@ def createTalk(coach_name, input):
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "authorization": key
+        "authorization": "Basic Wkdsa2RHVnpkREpBYUc5MGJXRnBiQzVqYjIwOjhlZHhucXp1WElNaElocEtGcUNKeQ=="
     }
     
     
@@ -74,7 +72,7 @@ def getTalk(id_video):
 
     headers = {
         "accept": "application/json",
-        "authorization": key
+        "authorization": "Basic Wkdsa2RHVnpkREpBYUc5MGJXRnBiQzVqYjIwOjhlZHhucXp1WElNaElocEtGcUNKeQ=="
     }
     
     response = requests.get(url, headers=headers)

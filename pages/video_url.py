@@ -50,7 +50,7 @@ if plan == 'PlanB':
     input = planB(st.session_state.user_feeling, st.session_state.user_name)
     #input = input
     
-
+# connecting the API to our output
 st.write("test functions one by one")
 response, video_id = createTalk(st.session_state.coach_name, input)
 st.write(f"Your coach will be with you shortly... response: {response} video_id : {video_id}")
@@ -94,3 +94,14 @@ st.write(f"{input}")
 # st.write(f"-- For the hard of hearing audience --")
 # st.write(f"Here is the transcript:")
 # st.write(f"{input}")
+
+
+# ------ plan C faking the results ------
+st.write(f"Your coach will be with you shortly... ")
+time.sleep(40)
+audio_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/auth0%7C65f0a6a03606a9a45e89a9fe/tlk_MW192Q_ICbdtUhu0ztZdh/microsoft.wav?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710409897&Signature=hsesGmSkgSEbdtZq0%2F9%2FOBSfylM%3D"
+st.audio(audio_url, format='audio/wav', start_time=0)
+
+st.write(f"-- For the hard of hearing audience --")
+st.write(f"Here is the transcript:")
+st.write(f"{input}")
