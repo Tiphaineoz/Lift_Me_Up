@@ -26,14 +26,12 @@ with st.form("my_form"):
    st.session_state.user_name = st.text_input("What's your name?")
    st.session_state.user_feeling = st.text_input("Tell me about how you feel:")
    # st.write('your prompt: ' + user_text) 
-   st.session_state.coach_name = st.selectbox("Pick your personal motivational coach:", [" ", "Peter", "Sean", "Jenna", "Christine"])
+   st.session_state.coach_name = st.selectbox("Pick your personal motivational coach:", [" ", "Peter", "Lucy", "Will", "Sean", "Jenna", "Christine"])
    submit = st.form_submit_button('Submit')
 
 # change page once submitted
 if submit:
     switch_page('video_url')
-
-
 
 
 
