@@ -49,11 +49,18 @@ if plan == 'PlanA':
 if plan == 'PlanB':
     input = planB(st.session_state.user_feeling, st.session_state.user_name)
     #input = input
+    
+st.write(f"input: {input}")
+response, video_id = createTalk(st.session_state.coach_name, input)
+st.write(f"creating talk ? response: {response} video_id : {video_id}")
+video_test = getTalk(video_id)
+st.write(f"got the talk ? {video_test}")
+st.write(f" type : {type(video_test)}")
+data = json.loads(video_test.text)
+st.write(f"got the json ? {data}")
 
-response = createTalk(st.session_state.coach_name, input)
-st.write(f"creating talk ? {response}")
 data = download_video(st.session_state.coach_name, input)
-st.write(f" result download video  {data}")
+st.write(f" result download video function {data}")
 st.write(data)
 video = data.get("result_url")
 if video: 
