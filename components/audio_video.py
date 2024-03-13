@@ -66,7 +66,7 @@ def createTalk(coach_name, input):
     response = requests.post(url, json=payload, headers=headers)
     data = json.loads(response.text)
     id_video = data.get("id")
-    return key, response, id_video, source_url, voice_id, style
+    return response, id_video, source_url, voice_id, style
 
 # This is the function to get the video
 def getTalk(id_video):
