@@ -149,5 +149,4 @@ faiss-cpu
 sentence_transformers
 langchain_openai
 langchainhub
-langchain
 openai

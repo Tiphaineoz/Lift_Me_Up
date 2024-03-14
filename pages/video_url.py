@@ -11,7 +11,7 @@ from components.audio_video import *
 from params import *
 from langchain.plan_b import planB
 from langchain.label_predict import predict_label
-from langchain.HugosChunk import *
+from langchain.query_doc_chain import *
 
 key = os.environ.get('key')
 api_key = os.environ.get('TIPH_OPENAI')
@@ -61,7 +61,7 @@ if plan == 'PlanB':
     #input = input
     
 # connecting the API to our output
-# the workflow that works !
+# the workflow that works for sure!
 # -----------------------------
 # response, video_id = createTalk(st.session_state.coach_name, input)
 # st.write(f"{st.session_state.coach_name} will be with you shortly... ") # just to check it runs ok : (" response: {response} video_id : {video_id}")
@@ -91,8 +91,6 @@ if plan == 'PlanB':
 # -----------------------------
 
 
-
-
 # st.write("test built in function")
 # data = download_video(st.session_state.coach_name, input)
 # st.write(f" result download video function {data}")
@@ -113,13 +111,14 @@ if plan == 'PlanB':
 
 
 # ------ plan C faking the results ------
-# st.write(f"Your coach will be with you shortly... ")
-# time.sleep(40)
-# audio_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/auth0%7C65f0a6a03606a9a45e89a9fe/tlk_MW192Q_ICbdtUhu0ztZdh/microsoft.wav?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710409897&Signature=hsesGmSkgSEbdtZq0%2F9%2FOBSfylM%3D"
-# st.audio(audio_url, format='audio/wav', start_time=0)
+if plan == "PlanC":
+    st.write(f"Your coach will be with you shortly... ")
+    time.sleep(40)
+    audio_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/auth0%7C65f0a6a03606a9a45e89a9fe/tlk_MW192Q_ICbdtUhu0ztZdh/microsoft.wav?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710409897&Signature=hsesGmSkgSEbdtZq0%2F9%2FOBSfylM%3D"
+    st.audio(audio_url, format='audio/wav', start_time=0)
 
-# st.write(f"-- For the hard of hearing audience --")
-# st.write(f"Here is the transcript:")
-# st.write("Hey Tiph! I've heard that you're feeling anxious about this project, but let me tell you something - you've got this!)
-# st.write("First of all, take a deep breath and remind yourself of all the amazing things you've accomplished in the past. You're capable of so much, and this project is no different. ")
-# st.write("I know it's tough, but remember that anxiety only has as much power as you give it. You're in control, and you're going to do great. ")
+    st.write(f"-- For the hard of hearing audience --")
+    st.write(f"Here is the transcript:")
+    st.write("Hey Tiph! I've heard that you're feeling anxious about this project, but let me tell you something - you've got this!)
+    st.write("First of all, take a deep breath and remind yourself of all the amazing things you've accomplished in the past. You're capable of so much, and this project is no different. ")
+    st.write("I know it's tough, but remember that anxiety only has as much power as you give it. You're in control, and you're going to do great. ")
