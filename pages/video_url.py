@@ -119,6 +119,6 @@ if plan == "PlanC":
 
     st.write(f"-- For the hard of hearing audience --")
     st.write(f"Here is the transcript:")
-    st.write("Hey Tiph! I've heard that you're feeling anxious about this project, but let me tell you something - you've got this!)
+    st.write("Hey Tiph! I've heard that you're feeling anxious about this project, but let me tell you something - you've got this!")
     st.write("First of all, take a deep breath and remind yourself of all the amazing things you've accomplished in the past. You're capable of so much, and this project is no different. ")
     st.write("I know it's tough, but remember that anxiety only has as much power as you give it. You're in control, and you're going to do great. ")
