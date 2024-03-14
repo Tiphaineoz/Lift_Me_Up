@@ -13,10 +13,11 @@ subprocess.run(['pip', 'install', '.'])
 # few image choices 
 logo = 'images/Logo_Lift_Me_Up.jpg' 
 zen = 'images/water_zen.jpg'
+water = 'images/peace_water.jpg'
 cloud = 'images/cloud_sky.jpg'
+rainbow = 'images/arcoiris.png'
 
-
-landing_page(zen)
+landing_page(rainbow)
 
 #The form the user should fill in to get the motivational video
 col3 = st.columns(1)

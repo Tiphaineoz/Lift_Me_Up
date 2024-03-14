@@ -37,3 +37,4 @@ def predict_label(input):
     predicted_labels = [label_list[str(idx)] for idx in predicted_labels_numerical]
     return predicted_labels[0]
 
+#test

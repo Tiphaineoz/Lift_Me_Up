@@ -19,8 +19,9 @@ api_key = os.environ.get('TIPH_OPENAI')
 cloud = 'images/cloud_sky.jpg'
 water = 'images/water_zen.jpg'
 clear = 'images/beige.jpg'
+cotton = 'images/cotton.jpg'
 
-landing_page(clear)
+landing_page(cotton)
 
 # Use the values from the input page
 st.write(f"Hi {st.session_state.user_name}")
@@ -112,8 +113,8 @@ if plan == 'PlanB':
 
 # ------ plan C faking the results ------
 if plan == "PlanC":
-    st.write(f"Your coach will be with you shortly... ")
-    time.sleep(40)
+    st.write(f"{st.session_state.coach_name} will be with you shortly... ")
+    time.sleep(5)
     audio_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/auth0%7C65f0a6a03606a9a45e89a9fe/tlk_MW192Q_ICbdtUhu0ztZdh/microsoft.wav?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710409897&Signature=hsesGmSkgSEbdtZq0%2F9%2FOBSfylM%3D"
     st.audio(audio_url, format='audio/wav', start_time=0)
 
