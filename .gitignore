@@ -2,3 +2,4 @@ base_data/
 .env
 notebooks/
 liftmeup_app/
+lang/

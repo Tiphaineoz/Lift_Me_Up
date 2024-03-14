@@ -4,7 +4,7 @@ import requests
 import json
 import time
 
-key = os.environ.get('key')
+key = st.secrets['key']
 
 # list of coach options
 coach_dict = { "Peter" : { 'url' : "https://clips-presenters.d-id.com/darren/RYscOXmp8t/CtDjn3POSq/image.png",
@@ -63,7 +63,8 @@ def createTalk(coach_name, input):
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "authorization": "Basic Wkdsa2RHVnpkREpBYUc5MGJXRnBiQzVqYjIwOjhlZHhucXp1WElNaElocEtGcUNKeQ=="
+        "authorization": str(key)
+        #"authorization": "Basic Wkdsa2RHVnpkREpBYUc5MGJXRnBiQzVqYjIwOjhlZHhucXp1WElNaElocEtGcUNKeQ=="
     }
     
     
