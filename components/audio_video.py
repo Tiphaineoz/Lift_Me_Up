@@ -4,12 +4,18 @@ import requests
 import json
 import time
 
-key = os.environ.get('key')
+key = st.secrets['key']
 
 # list of coach options
 coach_dict = { "Peter" : { 'url' : "https://clips-presenters.d-id.com/darren/RYscOXmp8t/CtDjn3POSq/image.png",
                           'voice_id' : "en-US-AndrewNeural",
                             'style' : "Cheerful"},
+              "Lucy" : { 'url' : "https://create-images-results.d-id.com/DefaultPresenters/FuturisticAvatar_f_ai/image.jpeg",
+                          'voice_id' : "en-US-AndrewNeural",
+                            'style' : "Cheerful"},
+              "Will" : {'url' : "https://create-images-results.d-id.com/DefaultPresenters/Bull_m/v1_image.jpeg",
+                          'voice_id' : "en-US-JasonNeural",
+                            'style' : "Hopeful"},
               "Sean" : {'url' : "https://clips-presenters.d-id.com/william/FPvBkeR0kv/bAIOAUOG33/image.png",
                           'voice_id' : "en-US-JasonNeural",
                             'style' : "Hopeful"},
@@ -57,7 +63,8 @@ def createTalk(coach_name, input):
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "authorization": "Basic Wkdsa2RHVnpkREpBYUc5MGJXRnBiQzVqYjIwOjhlZHhucXp1WElNaElocEtGcUNKeQ=="
+        "authorization": str(key)
+        #"authorization": "Basic Wkdsa2RHVnpkREpBYUc5MGJXRnBiQzVqYjIwOjhlZHhucXp1WElNaElocEtGcUNKeQ=="
     }
     
     

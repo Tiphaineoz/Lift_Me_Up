@@ -144,5 +144,10 @@ youtube-transcript-api
 streamlit
 pytube
 langchain
+huggingface-hub
+faiss-cpu
+sentence_transformers
 langchain_openai
+langchainhub
+langchain.chains
 openai

@@ -2,9 +2,9 @@ from langchain_community.embeddings.huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import YoutubeLoader
-from langchain_openai import ChatOpenAI
+from lang.langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain.chains.combine_documents.stuff import create_stuff_documents_chain
+from lang.langchain.chains.combine_documents.stuff import create_stuff_documents_chain
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.chat_message_histories import ChatMessageHistory
 import os

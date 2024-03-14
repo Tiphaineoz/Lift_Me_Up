@@ -5,4 +5,4 @@ TIPH_OPENAI = os.environ.get("TIPH_OPENAI")
 AITOR_VIDEO = os.environ.get("AITOR_VIDEO")
 AITOR_AUDIO = os.environ.get("AITOR_AUDIO")
 
-plan = 'PlanB'
+plan = 'PlanA'
