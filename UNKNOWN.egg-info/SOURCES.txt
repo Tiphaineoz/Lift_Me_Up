@@ -1473,11 +1473,11 @@ lang/langchain_core/utils/loading.py
 lang/langchain_core/utils/pydantic.py
 lang/langchain_core/utils/strings.py
 lang/langchain_core/utils/utils.py
-langchain/HugosChunk.py
 langchain/__init__.py
 langchain/label_predict.py
 langchain/plan_b.py
 langchain/process_transcripts_langchain.py
+langchain/query_doc_chain.py
 langchain/__pycache__/__init__.cpython-310.pyc
 langchain/__pycache__/label_predict.cpython-310.pyc
 langchain/__pycache__/plan_b.cpython-310.pyc

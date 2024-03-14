@@ -26,7 +26,7 @@ def landing_page(img):
         <style>
         .stApp {{
         background-image: url("data:image/jpg;base64,{bin_str}");
-        background-position: center;
+        background-position: top;
         opacity: 0.7;
         }}
         </style>
