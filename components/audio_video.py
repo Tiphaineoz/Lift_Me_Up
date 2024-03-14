@@ -79,7 +79,8 @@ def getTalk(id_video):
 
     headers = {
         "accept": "application/json",
-        "authorization": "Basic Wkdsa2RHVnpkREpBYUc5MGJXRnBiQzVqYjIwOjhlZHhucXp1WElNaElocEtGcUNKeQ=="
+        "authorization": str(key)
+        #"authorization": "Basic Wkdsa2RHVnpkREpBYUc5MGJXRnBiQzVqYjIwOjhlZHhucXp1WElNaElocEtGcUNKeQ=="
     }
     
     response = requests.get(url, headers=headers)
