@@ -11,7 +11,7 @@ from components.audio_video import *
 from params import *
 from langchain.plan_b import planB
 from langchain.label_predict import predict_label
-from langchain.query_doc_chain import *
+#from langchain.query_doc_chain import *
 
 key = os.environ.get('key')
 api_key = os.environ.get('TIPH_OPENAI')
