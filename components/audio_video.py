@@ -11,11 +11,11 @@ coach_dict = { "Peter" : { 'url' : "https://clips-presenters.d-id.com/darren/RYs
                           'voice_id' : "en-US-AndrewNeural",
                             'style' : "Cheerful"},
               "Lucy" : { 'url' : "https://create-images-results.d-id.com/DefaultPresenters/FuturisticAvatar_f_ai/image.jpeg",
-                          'voice_id' : "en-US-AndrewNeural",
+                          'voice_id' : "en-US-SaraNeural",
                             'style' : "Cheerful"},
               "Will" : {'url' : "https://create-images-results.d-id.com/DefaultPresenters/Bull_m/v1_image.jpeg",
-                          'voice_id' : "en-US-JasonNeural",
-                            'style' : "Hopeful"},
+                          'voice_id' : "en-US-DavisNeural",
+                            'style' : "Cheerful"},
               "Sean" : {'url' : "https://clips-presenters.d-id.com/william/FPvBkeR0kv/bAIOAUOG33/image.png",
                           'voice_id' : "en-US-JasonNeural",
                             'style' : "Hopeful"},
@@ -64,8 +64,7 @@ def createTalk(coach_name, input):
         "accept": "application/json",
         "content-type": "application/json",
         #"authorization": str(key)
-        "authorization" : "Basic Wkdsa2RHVnpkREZBYUc5MGJXRnBiQzVqYjIwOlpEZnZiaUY4STN4bjN2Yi01YlFFNA=="
-        #"authorization": "Basic Wkdsa2RHVnpkREpBYUc5MGJXRnBiQzVqYjIwOjhlZHhucXp1WElNaElocEtGcUNKeQ=="
+        "authorization": 'Basic WVdsMGIzSndjbTlzT1RKQVoyMWhhV3d1WTI5dDp0OG5DMlVnaHVYTmF5dEJSVzZoWjY=' 
     }
     
     
@@ -81,8 +80,7 @@ def getTalk(id_video):
     headers = {
         "accept": "application/json",
         #"authorization": str(key)
-        "authorization" : "Basic Wkdsa2RHVnpkREZBYUc5MGJXRnBiQzVqYjIwOlpEZnZiaUY4STN4bjN2Yi01YlFFNA=="
-        #"authorization": "Basic Wkdsa2RHVnpkREpBYUc5MGJXRnBiQzVqYjIwOjhlZHhucXp1WElNaElocEtGcUNKeQ=="
+        "authorization": 'Basic WVdsMGIzSndjbTlzT1RKQVoyMWhhV3d1WTI5dDp0OG5DMlVnaHVYTmF5dEJSVzZoWjY=' 
     }
     
     response = requests.get(url, headers=headers)

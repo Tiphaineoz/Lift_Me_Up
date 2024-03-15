@@ -42,7 +42,6 @@ st.write(f"You chose {st.session_state.coach_name} as your motivational coach. �
 #         deeply about your work, and that's something to be proud of. But here's the thing: anxiety only has as much power as \
 #         you give it. You're in the driver's seat of your mind, my friend."
 
-time.sleep(5)
     
 if plan == 'PlanA':
     st.write(f" If I understand correctly your preocupation today is about: ...")
@@ -70,8 +69,8 @@ response, video_id = createTalk(st.session_state.coach_name, input)
 st.write(f"{st.session_state.coach_name} will be with you shortly... ") # just to check it runs ok : (" response: {response} video_id : {video_id}")
 time.sleep(40)
 video_test = getTalk(video_id)
-# st.write(f"got the talk ? {video_test}") # just to check it runs ok
-# st.write(f" type : {type(video_test)}") # just to check it runs ok
+st.write(f"got the talk ? {video_test}") # just to check it runs ok
+st.write(f" type : {type(video_test)}") # just to check it runs ok
 time.sleep(20)
 data = json.loads(video_test.text)
 # st.write(f"got the json ? {data}") # just to check it runs ok
@@ -82,16 +81,16 @@ if video:
     time.sleep(5)
     st.video(video)
 else : 
-    audio = data.get("audio_url")
-    if audio: 
-        st.write("getting the audio ⏲️")
-        time.sleep(5)
-        st.audio(audio)
-    else: 
-        # video_url = ""  # think about adding a back up video 
-        # st.video(video_url)
-        audio_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/auth0%7C65f0a6a03606a9a45e89a9fe/tlk_MW192Q_ICbdtUhu0ztZdh/microsoft.wav?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710409897&Signature=hsesGmSkgSEbdtZq0%2F9%2FOBSfylM%3D"
-        st.audio(audio_url, format='audio/wav', start_time=0)
+    # audio = data.get("audio_url")
+    # if audio: 
+    #     st.write("getting the audio ⏲️")
+    #     time.sleep(5)
+    #     st.audio(audio)
+    # else: 
+    video_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/google-oauth2%7C114222270476656058868/tlk_2JRXNnRCNALWN-0xZ9mM1/1710514551140.mp4?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710600981&Signature=YL3PYvuNrFDx1TEXp1vjxbYoxrI%3D"  # think about adding a back up video 
+    st.video(video_url)
+    audio_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/google-oauth2%7C114222270476656058868/tlk_2JRXNnRCNALWN-0xZ9mM1/microsoft.wav?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710600951&Signature=DaO%2FOUrkDrwEoTOru9K5Eg3nXCY%3D"
+    st.audio(audio_url, format='audio/wav', start_time=0)
 
 
 st.write(f"-- For the hard of hearing audience 🎧--")
