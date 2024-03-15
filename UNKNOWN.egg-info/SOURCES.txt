@@ -28,7 +28,6 @@ images/cloud_sky.jpg
 images/cotton.jpg
 images/mountain.jpg
 images/water_zen.jpg
-images/white_water.jpg
 lang/__init__.py
 lang/langchain/HugosChunk.py
 lang/langchain/__init__.py
