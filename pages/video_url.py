@@ -67,17 +67,17 @@ if plan == 'PlanB':
 #-----------------------------
 response, video_id = createTalk(st.session_state.coach_name, input)
 st.write(f"{st.session_state.coach_name} will be with you shortly... ") # just to check it runs ok : (" response: {response} video_id : {video_id}")
-time.sleep(40)
-video_test = getTalk(video_id)
-st.write(f"got the talk ? {video_test}") # just to check it runs ok
-st.write(f" type : {type(video_test)}") # just to check it runs ok
 time.sleep(20)
+video_test = getTalk(video_id)
+# st.write(f"got the talk ? {video_test}") # just to check it runs ok
+# st.write(f" type : {type(video_test)}") # just to check it runs ok
+st.write("⏲️")
+time.sleep(5)
 data = json.loads(video_test.text)
 # st.write(f"got the json ? {data}") # just to check it runs ok
 
 video = data.get("result_url")
 if video: 
-    st.write("⏲️")
     time.sleep(5)
     st.video(video)
 else : 
@@ -87,16 +87,17 @@ else :
     #     time.sleep(5)
     #     st.audio(audio)
     # else: 
-    video_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/google-oauth2%7C114222270476656058868/tlk_2JRXNnRCNALWN-0xZ9mM1/1710514551140.mp4?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710600981&Signature=YL3PYvuNrFDx1TEXp1vjxbYoxrI%3D"  # think about adding a back up video 
+    video_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/google-oauth2%7C114222270476656058868/tlk_ESDWD78EPqFukQ6K3CpAL/1710515086612.mp4?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710601514&Signature=F7d3YX9jgkmXXhc8z%2FgsbLgIbUs%3D" # Lucy
+    #video_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/google-oauth2%7C114222270476656058868/tlk_2JRXNnRCNALWN-0xZ9mM1/1710514551140.mp4?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710600981&Signature=YL3PYvuNrFDx1TEXp1vjxbYoxrI%3D"  # Will
     st.video(video_url)
-    audio_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/google-oauth2%7C114222270476656058868/tlk_2JRXNnRCNALWN-0xZ9mM1/microsoft.wav?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710600951&Signature=DaO%2FOUrkDrwEoTOru9K5Eg3nXCY%3D"
-    st.audio(audio_url, format='audio/wav', start_time=0)
+    # audio_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/google-oauth2%7C114222270476656058868/tlk_2JRXNnRCNALWN-0xZ9mM1/microsoft.wav?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710600951&Signature=DaO%2FOUrkDrwEoTOru9K5Eg3nXCY%3D"
+    # st.audio(audio_url, format='audio/wav', start_time=0)
 
 
 st.write(f"-- For the hard of hearing audience 🎧--")
 st.write(f"🔠 Here is the transcript:")
 st.write(f"{input}")
-st.write(f"the json : {data}") 
+# st.write(f"the json : {data}") 
 # -----------------------------
 
 
