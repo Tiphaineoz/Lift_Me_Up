@@ -11,7 +11,7 @@ coach_dict = { "Peter" : { 'url' : "https://clips-presenters.d-id.com/darren/RYs
                           'voice_id' : "en-US-AndrewNeural",
                             'style' : "Cheerful"},
               "Lucy" : { 'url' : "https://create-images-results.d-id.com/DefaultPresenters/FuturisticAvatar_f_ai/image.jpeg",
-                          'voice_id' : "en-US-AndrewNeural",
+                          'voice_id' : "en-US-SaraNeural",
                             'style' : "Cheerful"},
               "Will" : {'url' : "https://create-images-results.d-id.com/DefaultPresenters/Bull_m/v1_image.jpeg",
                           'voice_id' : "en-US-DavisNeural",
