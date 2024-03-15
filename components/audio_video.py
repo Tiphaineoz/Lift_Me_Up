@@ -63,7 +63,8 @@ def createTalk(coach_name, input):
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "authorization": str(key)
+        #"authorization": str(key)
+        "authorization" : "Basic Wkdsa2RHVnpkREZBYUc5MGJXRnBiQzVqYjIwOlpEZnZiaUY4STN4bjN2Yi01YlFFNA=="
         #"authorization": "Basic Wkdsa2RHVnpkREpBYUc5MGJXRnBiQzVqYjIwOjhlZHhucXp1WElNaElocEtGcUNKeQ=="
     }
     
@@ -79,7 +80,8 @@ def getTalk(id_video):
 
     headers = {
         "accept": "application/json",
-        "authorization": str(key)
+        #"authorization": str(key)
+        "authorization" : "Basic Wkdsa2RHVnpkREZBYUc5MGJXRnBiQzVqYjIwOlpEZnZiaUY4STN4bjN2Yi01YlFFNA=="
         #"authorization": "Basic Wkdsa2RHVnpkREpBYUc5MGJXRnBiQzVqYjIwOjhlZHhucXp1WElNaElocEtGcUNKeQ=="
     }
     
