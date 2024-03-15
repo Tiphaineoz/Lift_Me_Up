@@ -86,11 +86,11 @@ else :
         st.write("getting the audio ⏲️")
         time.sleep(5)
         st.audio(audio)
-    # else: 
-    #     # video_url = ""  # think about adding a back up video 
-    #     # st.video(video_url)
-    #     audio_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/auth0%7C65f0a6a03606a9a45e89a9fe/tlk_MW192Q_ICbdtUhu0ztZdh/microsoft.wav?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710409897&Signature=hsesGmSkgSEbdtZq0%2F9%2FOBSfylM%3D"
-    #     st.audio(audio_url, format='audio/wav', start_time=0)
+    else: 
+        video_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/google-oauth2%7C114222270476656058868/tlk_2JRXNnRCNALWN-0xZ9mM1/1710514551140.mp4?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710600981&Signature=YL3PYvuNrFDx1TEXp1vjxbYoxrI%3D"  # think about adding a back up video 
+        st.video(video_url)
+        audio_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/google-oauth2%7C114222270476656058868/tlk_2JRXNnRCNALWN-0xZ9mM1/microsoft.wav?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710600951&Signature=DaO%2FOUrkDrwEoTOru9K5Eg3nXCY%3D"
+        st.audio(audio_url, format='audio/wav', start_time=0)
 
 
 st.write(f"-- For the hard of hearing audience 🎧--")
