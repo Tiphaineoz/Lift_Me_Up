@@ -20,18 +20,20 @@ cloud = 'images/cloud_sky.jpg'
 water = 'images/water_zen.jpg'
 clear = 'images/beige.jpg'
 cotton = 'images/cotton.jpg'
+rainbow = 'images/arcoiris.png'
 
-landing_page(cotton)
+
+landing_page(rainbow)
 
 # Use the values from the input page
 st.write(f"Hi {st.session_state.user_name}")
 st.write("Nice to see you today ☀️ Let's get started.")
 st.write(f" If I understand correctly your preocupation today is about: ...")
 time.sleep(5)
-st.write(f"{predict_label(st.session_state.user_feeling)}")
+st.write(f"🍀 {predict_label(st.session_state.user_feeling)}")
 time.sleep(5)
 # st.write(f" You said: {st.session_state.user_feeling}")
-st.write(f"You chose {st.session_state.coach_name} as your motivational coach.")
+st.write(f"You chose {st.session_state.coach_name} as your motivational coach. 👾")
 
 # input = "I'm feeling quite anxious about this project I'm not sure how I'll finish it on time" 
 # input = "I hear you're feeling a bit anxious about this project, wondering if you'll be able to finish it on time. \
@@ -63,32 +65,38 @@ if plan == 'PlanB':
     
 # connecting the API to our output
 # the workflow that works for sure!
-# -----------------------------
-# response, video_id = createTalk(st.session_state.coach_name, input)
-# st.write(f"{st.session_state.coach_name} will be with you shortly... ") # just to check it runs ok : (" response: {response} video_id : {video_id}")
-# time.sleep(40)
-# video_test = getTalk(video_id)
+#-----------------------------
+response, video_id = createTalk(st.session_state.coach_name, input)
+st.write(f"{st.session_state.coach_name} will be with you shortly... ") # just to check it runs ok : (" response: {response} video_id : {video_id}")
+time.sleep(40)
+video_test = getTalk(video_id)
 # st.write(f"got the talk ? {video_test}") # just to check it runs ok
 # st.write(f" type : {type(video_test)}") # just to check it runs ok
-# time.sleep(20)
-# data = json.loads(video_test.text)
+time.sleep(20)
+data = json.loads(video_test.text)
 # st.write(f"got the json ? {data}") # just to check it runs ok
 
+video = data.get("result_url")
+if video: 
+    st.write("⏲️")
+    time.sleep(5)
+    st.video(video)
+else : 
+    audio = data.get("audio_url")
+    if audio: 
+        st.write("getting the audio ⏲️")
+        time.sleep(5)
+        st.audio(audio)
+    else: 
+        # video_url = ""  # think about adding a back up video 
+        # st.video(video_url)
+        audio_url = "https://d-id-talks-prod.s3.us-west-2.amazonaws.com/auth0%7C65f0a6a03606a9a45e89a9fe/tlk_MW192Q_ICbdtUhu0ztZdh/microsoft.wav?AWSAccessKeyId=AKIA5CUMPJBIK65W6FGA&Expires=1710409897&Signature=hsesGmSkgSEbdtZq0%2F9%2FOBSfylM%3D"
+        st.audio(audio_url, format='audio/wav', start_time=0)
 
-# video = data.get("result_url")
-# if video: 
-#     st.write("⏲️")
-#     time.sleep(5)
-#     st.video(video)
-# else : 
-    # audio = data.get("audio_url")
-    # if audio: 
-    #     st.write("getting the audio ⏲️")
-    #     time.sleep(5)
-    #     st.audio(audio)
-# st.write(f"-- For the hard of hearing audience --")
-# st.write(f"Here is the transcript:")
-# st.write(f"{input}")
+
+st.write(f"-- For the hard of hearing audience 🎧--")
+st.write(f"🔠 Here is the transcript:")
+st.write(f"{input}")
 # -----------------------------
 
 
