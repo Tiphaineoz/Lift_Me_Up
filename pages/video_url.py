@@ -97,6 +97,7 @@ else :
 st.write(f"-- For the hard of hearing audience 🎧--")
 st.write(f"🔠 Here is the transcript:")
 st.write(f"{input}")
+st.write(f"the json : {data}") 
 # -----------------------------
 
 
