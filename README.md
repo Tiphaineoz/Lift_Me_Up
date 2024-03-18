@@ -40,13 +40,14 @@ As a result we've decided to manually label 10% of our dataset to train a RNN mo
 - Langchain :
 
 Langchain structure was the answer to customise the answer to the user. 
+
 💬Langchain used relevant summaries from expert advice and copied the style of motivational speakers. 
 
 ## The Front end 
 
 We are using streamlit to showcase our project on Demo day. https://liftmeup-motivational.streamlit.app/
 
-We are very happy of our final prototype version which showcases an AI generated audio and video (leveraging on the D-iD API, studio.d-id.com)
+We are very happy of our final prototype version which showcases an AI generated audio and video of our lagnchain output (leveraging on the D-iD API, studio.d-id.com)
 
 <img src="https://github.com/Tiphaineoz/Lift_Me_Up/blob/master/images/Lift%20Me%20Up%20screenshot.png" height = "150">  =>  <img src="https://github.com/Tiphaineoz/Lift_Me_Up/blob/master/images/Lucy%20photo.png" height = "150">
 
