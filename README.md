@@ -1,6 +1,4 @@
-# Welcome to Lift Me Up
-
-<img src="https://github.com/Tiphaineoz/Lift_Me_Up/blob/master/images/Logo_Lift_Me_Up.jpg" width="80">
+<img src="https://github.com/Tiphaineoz/Lift_Me_Up/blob/master/images/Logo_Lift_Me_Up.jpg" width="80"> # Welcome to Lift Me Up
 
 Bringing positivity to your fingertips
 
