@@ -46,9 +46,11 @@ Langchain structure was the answer to customise the answer to the user.
 
 We are using streamlit to showcase our project on Demo day. https://liftmeup-motivational.streamlit.app/
 We are very happy of our final prototype version which showcases an AI generated audio and video (leveraging on the D-iD API, studio.d-id.com)
+<img src="https://github.com/Tiphaineoz/Lift_Me_Up/blob/master/images/Lift%20Me%20Up%20screenshot.png" height = "100"> <img src="https://github.com/Tiphaineoz/Lift_Me_Up/blob/master/images/Lucy%20photo.png" height = "100">
 
 
 ## Supportive Presentation
 
-On demo day we've used a presentation on the side of our streamlit app to explain our reasoning and the processus we've been through: https://www.canva.com/design/DAF_ZCeuL48/guncB5aWjDr5gVjIY1twqw/edit?utm_content=DAF_ZCeuL48&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+On demo day we've used a presentation on the side of our streamlit app to explain our reasoning and the processus we've been through: 
+https://www.canva.com/design/DAF_ZCeuL48/guncB5aWjDr5gVjIY1twqw/edit?utm_content=DAF_ZCeuL48&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
