@@ -1,6 +1,7 @@
 # Welcome to Lift Me Up
 
 ![Lift Me Up Logo](https://github.com/Tiphaineoz/Lift_Me_Up/blob/master/images/Logo_Lift_Me_Up.jpg)
+<img src="https://github.com/Tiphaineoz/Lift_Me_Up/blob/master/images/Logo_Lift_Me_Up.jpg" width="50">
 
 Bringing positivity to your fingertips
 
