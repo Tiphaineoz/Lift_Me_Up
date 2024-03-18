@@ -1,6 +1,6 @@
 # Welcome to Lift Me Up
 
-![Lift Me Up Logo](https://github.com/tiphaineoz/Lift_Me_Up/images/Logo_Lift_Me_Up.jpg)
+![Lift Me Up Logo](https://github.com/Tiphaineoz/Lift_Me_Up/blob/master/images/Logo_Lift_Me_Up.jpg)
 
 Bringing positivity to your fingertips
 
@@ -46,8 +46,9 @@ Langchain structure was the answer to customise the answer to the user.
 
 ## The Front end 
 
-We are using streamlit to showcase our project on Demo day.
-We are very happy of our final prototype version which showcase an AI generated audio and video (leveraging on the D-iD API, studio.d-id.com)
+We are using streamlit to showcase our project on Demo day. https://liftmeup-motivational.streamlit.app/
+We are very happy of our final prototype version which showcases an AI generated audio and video (leveraging on the D-iD API, studio.d-id.com)
+
 
 ## Supportive Presentation
 
